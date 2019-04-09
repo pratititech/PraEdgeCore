@@ -5,11 +5,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.pratittech.praEdge.iot.dataStorage.entity.Device;
 import com.pratittech.praEdge.iot.dataStorage.repository.DeviceRepository;
 
 @SpringBootApplication
-public class Application implements CommandLineRunner {
+public class Application {
+//implements CommandLineRunner {
 
 @Autowired
 private DeviceRepository deviceRepository;
@@ -18,7 +18,7 @@ private DeviceRepository deviceRepository;
         SpringApplication.run(Application.class, args);
     }
 
-	@Override
+	/*@Override
 	public void run(String... args) throws Exception {
 		// TODO Auto-generated method stub
 		deviceRepository.deleteAll();
@@ -39,4 +39,5 @@ private DeviceRepository deviceRepository;
 				
 
 	}
+	*/
 }

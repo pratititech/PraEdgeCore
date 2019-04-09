@@ -1,12 +1,11 @@
 package com.pratittech.praEdge.iot.dataStorage.repository;
 
-import java.util.List;
-
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import com.pratittech.praEdge.iot.dataStorage.entity.Device1;
+import com.pratittech.praEdge.iot.dataStorage.entity.Plant;
 
-public interface DeviceRepository  extends MongoRepository<Device1,String>{
+public interface PlantRepository  extends MongoRepository<Plant,String>{
 
 	public Device1 findByName(String name);
 }

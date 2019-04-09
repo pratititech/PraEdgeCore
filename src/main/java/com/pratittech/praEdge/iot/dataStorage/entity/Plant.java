@@ -1,13 +1,22 @@
 package com.pratittech.praEdge.iot.dataStorage.entity;
 
-import org.springframework.data.annotation.Id;
+import java.util.Date;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+@Document(collection="Plant")
 public class Plant {
 	@Id
+	@JsonProperty
     private String id;
+	@JsonProperty
     private String name;
+	@JsonProperty
     private String description;
-    private String createdDate;
+    private Date createdDate;
 	
 	public String getId() {
 		return id;
@@ -27,10 +36,10 @@ public class Plant {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	public String getCreatedDate() {
+	public Date getCreatedDate() {
 		return createdDate;
 	}
-	public void setCreatedDate(String createdDate) {
+	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
 	@Override
