@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pratittech.praEdge.iot.dataStorage.entity.Device1;
+import com.pratittech.praEdge.iot.dataStorage.entity.Device;
 import com.pratittech.praEdge.iot.dataStorage.service.DeviceService;
 
 @RestController
@@ -24,21 +24,21 @@ public class DeviceController {
  private DeviceService deviceService;
 
 @PostMapping("/devices")	
-public void createDevice(@RequestBody Device1 request){
+public void createDevice(@RequestBody Device request){
 	deviceService.createDevice(request);
 }
 
 @GetMapping("/devices/{deviceId}")
-public Optional<Device1> getDevice(@PathVariable("deviceId") String deviceId) {
+public Optional<Device> getDevice(@PathVariable("deviceId") String deviceId) {
 	return deviceService.getDevice(deviceId);
 }
 @PutMapping("/devices/{deviceId}")
-public void updateDevice(@PathVariable("deviceId")  String deviceId,@RequestBody Device1 request) {
+public void updateDevice(@PathVariable("deviceId")  String deviceId,@RequestBody Device request) {
 	deviceService.updateDevice(deviceId,request);
 }
 
 @GetMapping("/devices")
-public List<Device1> listAllDevices() {
+public List<Device> listAllDevices() {
 	return deviceService.getAllDevices();
 }
 

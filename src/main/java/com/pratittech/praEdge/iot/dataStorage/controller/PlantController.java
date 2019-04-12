@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pratittech.praEdge.iot.dataStorage.entity.Plant;
 import com.pratittech.praEdge.iot.dataStorage.service.PlantService;
-import com.pratittech.praEdge.iot.dataStorage.service.PlantService;
 
 @RestController
 @RequestMapping(path = "/")

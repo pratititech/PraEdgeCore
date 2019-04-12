@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pratittech.praEdge.iot.dataStorage.entity.Device1;
 import com.pratittech.praEdge.iot.dataStorage.entity.DeviceAssignment;
 import com.pratittech.praEdge.iot.dataStorage.service.AssignmentService;
 

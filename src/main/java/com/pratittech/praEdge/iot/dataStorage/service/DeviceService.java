@@ -6,7 +6,7 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import com.pratittech.praEdge.iot.dataStorage.entity.Device1;
+import com.pratittech.praEdge.iot.dataStorage.entity.Device;
 import com.pratittech.praEdge.iot.dataStorage.repository.DeviceRepository;
 
 @Component
@@ -15,11 +15,11 @@ public class DeviceService {
 @Autowired
 private DeviceRepository  deviceRepository;
 
-public void createDevice( Device1 device) {
+public void createDevice( Device device) {
 	deviceRepository.save(device);
 }
 
-public void updateDevice(String deviceId, Device1 device) {
+public void updateDevice(String deviceId, Device device) {
 	deviceRepository.save(device);
 }
 
@@ -27,12 +27,12 @@ public void deleteDevice(String deviceId) {
 	deviceRepository.deleteById(deviceId);
 }
 
-public List<Device1> getAllDevices() {
+public List<Device> getAllDevices() {
 	return deviceRepository.findAll();
 	
 }
 
-public Optional<Device1> getDevice(String deviceId) {
+public Optional<Device> getDevice(String deviceId) {
 	return deviceRepository.findById(deviceId);
 	
 }
